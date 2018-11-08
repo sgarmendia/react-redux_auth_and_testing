@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import withAuth from './withAuth'
 import * as actions from 'actions'
-
 
 class CommentBox extends Component {
   state = { comment: '' }
@@ -32,4 +32,4 @@ class CommentBox extends Component {
   }
 }
 
-export default connect(null, actions)(CommentBox)
+export default connect(null, actions)(withAuth(CommentBox))
